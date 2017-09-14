@@ -1,4 +1,6 @@
+package SortingAlgorithms;
 
+import Controller.Simulation;
 
 public class BubbleSort {
 	Simulation sim = Simulation.get_instance();

@@ -1,10 +1,8 @@
-import java.awt.BorderLayout;
+package Controller;
+
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.EventQueue;
 import java.awt.Font;
-import java.awt.Point;
-import java.awt.ScrollPane;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,43 +16,14 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 import javax.swing.border.BevelBorder;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.LineBorder;
-import javax.swing.border.TitledBorder;
 import javax.swing.JButton;
 
 public class Container extends JFrame {
 	static Simulation Sim = Simulation.get_instance();
-	// private static int[] Bounds = { 400, 470, 420, 570, 520, 670, 620, 770,
-	// 720, 270, 220, 370, 320, 870, 820, 170, 120,
-	// 70, 20, 330 };
+	
 	static String sort_name = "Heap";
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		String n = JOptionPane.showInputDialog("Enter the array number : ");
-		int num = Integer.valueOf(n);
-		Sim.setArr(num);
-		// Sim.setBounds(Bounds);
-		String sort = null;
-		new Container();
-		sort = JOptionPane.showInputDialog(
-				"Enter the Sort : (Bubble , Heap , Shell , Merge, Insertion ," + "Selection or Quick )");
-
-		while (sort != null && !sort.equals("end")) {
-
-			Sim.sort(sort);
-			// Sim.setBounds(Bounds);
-			sort = JOptionPane.showInputDialog(
-					"Enter the Sort : (Bubble , Heap , Shell , Merge, Insertion ," + "Selection or Quick )");
-			Sim.Clear();
-		}
-		// Sim.setBounds(Bounds);
-		System.exit(0);
-
-	}
+	
 
 	/**
 	 * Create the frame.
@@ -157,8 +126,7 @@ public class Container extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 
 				// Sim.setBounds(Bounds);
-				// this.Clearing();
-
+			    //this.Clearing();
 			}
 		});
 		file.add(clear);
@@ -174,16 +142,12 @@ public class Container extends JFrame {
 		file.add(exit);
 		Sim.setBackground(Color.WHITE);
 		JScrollPane scroll = new JScrollPane(Sim);
-//		scroll.setPreferredSize(new Dimension(100,100)); 
 
 		scroll.setBounds(106, 10, 1234, 660);
 	    scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
-	    Sim.setMinimumSize(new Dimension(100, 100));
-	    Sim.setPreferredSize(new Dimension(100, 100));
-
+	   
 		scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 		 scroll.setViewportBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		// window.getContentPane().add(scroll);
 		
 		window.setJMenuBar(menuBar);
 		window.setVisible(true);
@@ -191,6 +155,5 @@ public class Container extends JFrame {
 		window.getContentPane().add(scroll);
 	
 
-//		Sim.setBorder(new TitledBorder(null, "Drawing Area", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 	}
 }

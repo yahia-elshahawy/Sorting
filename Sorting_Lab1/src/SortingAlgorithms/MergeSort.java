@@ -1,3 +1,6 @@
+package SortingAlgorithms;
+
+import Controller.Simulation;
 
 public class MergeSort {
 	Simulation sim = Simulation.get_instance();

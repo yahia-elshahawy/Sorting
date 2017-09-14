@@ -1,3 +1,6 @@
+package SortingAlgorithms;
+
+import Controller.Simulation;
 
 public class SelectionSort {
     Simulation sim = Simulation.get_instance();

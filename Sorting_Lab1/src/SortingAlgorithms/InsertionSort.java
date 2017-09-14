@@ -1,3 +1,6 @@
+package SortingAlgorithms;
+
+import Controller.Simulation;
 
 public class InsertionSort extends Thread {
 	private static InsertionSort ins;

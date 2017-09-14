@@ -1,3 +1,5 @@
+package Controller;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -72,7 +74,7 @@ public class Simulation extends JPanel {
 		}
 	}
 
-	MainClass sort = new MainClass();
+	SortChooser sort = new SortChooser();
 
 	public void setBounds(int[] bounds) {
 		repaint();
